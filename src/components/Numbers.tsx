@@ -54,31 +54,31 @@ export const Numbers = () => {
   ];
 
   return (
-    <section id="numbers" ref={sectionRef} className="py-24 bg-muted/30">
+    <section id="numbers" ref={sectionRef} className="py-16 sm:py-24 border-t border-border">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black">
-            Why ₹75,000 Makes <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Business Sense</span>
+        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-4">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+            Why ₹75,000 Makes <span className="text-primary">Business Sense</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-lg sm:text-xl text-muted-foreground font-bold">
             Let's talk numbers honestly, Sameer Sir.
           </p>
         </div>
 
         {/* Key Metrics */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12 sm:mb-16">
           {highlights.map((highlight, index) => (
             <Card 
               key={index}
-              className={`p-8 bg-gradient-to-br ${highlight.color} text-white shadow-2xl animate-scale-in`}
+              className="p-6 sm:p-8 bg-primary text-primary-foreground border-2 border-primary"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex flex-col items-center text-center">
-                <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur flex items-center justify-center mb-4">
-                  <highlight.icon className="w-8 h-8" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-background flex items-center justify-center mb-4 border-2 border-background">
+                  <highlight.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
-                <div className="text-sm font-medium mb-2 opacity-90">{highlight.label}</div>
-                <div className="text-4xl font-black">{highlight.value}</div>
+                <div className="text-xs sm:text-sm font-black mb-2 uppercase tracking-wider">{highlight.label}</div>
+                <div className="text-3xl sm:text-4xl font-black">{highlight.value}</div>
               </div>
             </Card>
           ))}
@@ -86,40 +86,40 @@ export const Numbers = () => {
 
         {/* ROI Timeline */}
         <div className="max-w-6xl mx-auto">
-          <Card className="p-8 md:p-12 bg-card/50 backdrop-blur border-primary/20">
-            <h3 className="text-3xl font-bold mb-8 text-center">Expected Return: 5X ROI</h3>
+          <Card className="p-6 sm:p-8 md:p-12 bg-card border-2 border-primary">
+            <h3 className="text-2xl sm:text-3xl font-black mb-6 sm:mb-8 text-center uppercase">Expected Return: 5X ROI</h3>
             
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {months.map((data, index) => (
                 <div 
                   key={index}
-                  className={`flex items-center gap-4 p-6 rounded-lg border transition-all ${
+                  className={`flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 p-4 sm:p-6 border-2 transition-all ${
                     isVisible ? 'animate-slide-in' : 'opacity-0'
                   }`}
                   style={{ 
                     animationDelay: `${index * 0.1}s`,
                     borderColor: index === months.length - 1 ? 'hsl(var(--primary))' : 'hsl(var(--border))',
-                    background: index === months.length - 1 ? 'hsl(var(--primary) / 0.05)' : 'hsl(var(--background) / 0.5)'
+                    background: index === months.length - 1 ? 'hsl(var(--primary) / 0.1)' : 'transparent'
                   }}
                 >
-                  <div className="flex-shrink-0 w-20">
-                    <div className="text-sm text-muted-foreground">Month {data.month}</div>
+                  <div className="flex-shrink-0 w-16 sm:w-20">
+                    <div className="text-xs sm:text-sm text-muted-foreground font-black uppercase">Month {data.month}</div>
                   </div>
-                  <div className="flex-1">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                      <div>
-                        <div className="text-sm text-muted-foreground mb-1">Revenue</div>
-                        <div className="text-2xl font-bold text-primary">{data.revenue}</div>
+                  <div className="flex-1 w-full">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+                      <div className="flex-1">
+                        <div className="text-xs text-muted-foreground mb-1 font-bold uppercase">Revenue</div>
+                        <div className="text-xl sm:text-2xl font-black text-primary">{data.revenue}</div>
                       </div>
-                      <div>
-                        <div className="text-sm text-muted-foreground mb-1">Net Gain</div>
-                        <div className={`text-2xl font-bold ${data.net.startsWith('-') ? 'text-red-500' : 'text-green-500'}`}>
+                      <div className="flex-1">
+                        <div className="text-xs text-muted-foreground mb-1 font-bold uppercase">Net Gain</div>
+                        <div className={`text-xl sm:text-2xl font-black ${data.net.startsWith('-') ? 'text-red-500' : 'text-green-500'}`}>
                           {data.net}
                         </div>
                       </div>
-                      <div className="sm:text-right">
-                        <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-                          <span className="text-sm font-semibold text-primary">{data.status}</span>
+                      <div className="sm:text-right flex-1">
+                        <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/20 border border-primary">
+                          <span className="text-xs sm:text-sm font-black text-primary uppercase">{data.status}</span>
                         </div>
                       </div>
                     </div>
@@ -128,16 +128,16 @@ export const Numbers = () => {
               ))}
             </div>
 
-            <div className="mt-12 space-y-6 text-center">
-              <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20">
-                <div className="text-lg text-muted-foreground mb-2">Annual Impact</div>
-                <div className="text-5xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <div className="mt-8 sm:mt-12 space-y-6 text-center">
+              <div className="p-6 sm:p-8 bg-primary/10 border-2 border-primary">
+                <div className="text-base sm:text-lg text-muted-foreground mb-2 font-black uppercase">Annual Impact</div>
+                <div className="text-4xl sm:text-5xl font-black text-primary">
                   ₹36-45 Lakh
                 </div>
-                <div className="text-sm text-muted-foreground mt-2">Additional Revenue</div>
+                <div className="text-xs sm:text-sm text-muted-foreground mt-2 uppercase font-bold">Additional Revenue</div>
               </div>
               
-              <p className="text-xl font-semibold max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl font-black max-w-2xl mx-auto uppercase">
                 Revenue swings reduce from <span className="text-red-500">20-50%</span> to <span className="text-green-500">10-15%</span>
               </p>
             </div>

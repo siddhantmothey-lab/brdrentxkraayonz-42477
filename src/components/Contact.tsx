@@ -24,7 +24,7 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-muted/30">
+    <section id="contact" className="py-16 sm:py-24 border-t border-border">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black">

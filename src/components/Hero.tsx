@@ -8,63 +8,61 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
           alt="Tattoo art background" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
       </div>
 
       {/* Progress bar */}
       <div className="fixed top-0 left-0 right-0 h-1 bg-muted z-50">
         <div 
           id="progress-bar" 
-          className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-300"
+          className="h-full bg-primary transition-all duration-300"
           style={{ width: '0%' }}
         />
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 text-center px-4 py-20">
-        <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          <div className="inline-block px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-4">
-            <span className="text-sm font-semibold text-primary">Partnership Proposal</span>
+      <div className="container relative z-10 text-center px-4 py-12 sm:py-20">
+        <div className="max-w-6xl mx-auto space-y-6 sm:space-y-12">
+          <div className="inline-block px-4 py-2 bg-primary/20 border border-primary mb-4">
+            <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider">Partnership Proposal</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter">
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              BRDR Entertainment
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-black tracking-tighter leading-none">
+            <span className="block" style={{ fontFamily: 'cursive', textTransform: 'lowercase' }}>
+              <span className="text-primary">one of a kind</span>
             </span>
-            <br />
-            <span className="text-foreground">×</span>
-            <br />
-            <span className="text-foreground">Kraayonz Pune</span>
+            <span className="block mt-2 sm:mt-4">BRDR</span>
+            <span className="block">ENTERTAINMENT</span>
+            <span className="block text-2xl sm:text-4xl md:text-5xl mt-2 sm:mt-4 text-muted-foreground">×</span>
+            <span className="block mt-2 sm:mt-4">KRAAYONZ</span>
+            <span className="block">PUNE</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-bold uppercase tracking-wide">
             A Strategic Partnership for Market Domination
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Button 
-              size="lg" 
-              className="text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 sm:pt-12">
+            <button 
+              className="text-base sm:text-lg px-8 py-4 bg-primary text-primary-foreground font-black uppercase tracking-wider hover:bg-primary/90 transition-all border-2 border-primary hover:shadow-[0_0_30px_rgba(255,0,0,0.5)] w-full sm:w-auto"
               onClick={scrollToOpportunity}
             >
               Explore The Opportunity
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="text-lg px-8 py-6 rounded-full"
+            </button>
+            <button 
+              className="text-base sm:text-lg px-8 py-4 bg-transparent text-foreground font-black uppercase tracking-wider border-2 border-foreground hover:bg-foreground hover:text-background transition-all w-full sm:w-auto"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Contact Us
-            </Button>
+            </button>
           </div>
         </div>
 

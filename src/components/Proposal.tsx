@@ -27,63 +27,63 @@ export const Proposal = () => {
   ];
 
   return (
-    <section id="proposal" className="py-24">
+    <section id="proposal" className="py-16 sm:py-24 border-t border-border">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black">
-            What We're <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Proposing</span>
+        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-6">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+            What We're <span className="text-primary">Proposing</span>
           </h2>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-8">
-            <Card className="p-8 bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-2xl">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-stretch mt-8">
+            <Card className="p-6 sm:p-8 bg-primary text-primary-foreground border-2 border-primary flex-1 sm:flex-initial">
               <div className="text-center">
-                <div className="text-lg font-semibold mb-2">Monthly Investment</div>
-                <div className="text-5xl font-black">₹75,000</div>
+                <div className="text-sm sm:text-lg font-black mb-2 uppercase tracking-wider">Monthly Investment</div>
+                <div className="text-4xl sm:text-5xl font-black">₹75,000</div>
               </div>
             </Card>
             
-            <Card className="p-8 bg-card border-primary/20 shadow-lg">
+            <Card className="p-6 sm:p-8 bg-card border-2 border-foreground flex-1 sm:flex-initial">
               <div className="text-center">
-                <div className="text-lg font-semibold mb-2">Dedicated Team</div>
-                <div className="text-5xl font-black text-primary">4 People</div>
+                <div className="text-sm sm:text-lg font-black mb-2 uppercase tracking-wider">Dedicated Team</div>
+                <div className="text-4xl sm:text-5xl font-black text-primary">4 People</div>
               </div>
             </Card>
           </div>
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-3xl font-bold text-center mb-12">Your Dedicated Team</h3>
+          <h3 className="text-2xl sm:text-3xl font-black text-center mb-8 sm:mb-12 uppercase">Your Dedicated Team</h3>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
             {team.map((member, index) => (
               <Card 
                 key={index} 
-                className="p-8 bg-card/50 backdrop-blur border-primary/20 hover:border-primary transition-all hover:shadow-lg animate-fade-in"
+                className="p-6 sm:p-8 bg-card border-2 border-border hover:border-primary transition-all"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                      <member.icon className="w-8 h-8 text-primary-foreground" />
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary flex items-center justify-center border-2 border-primary">
+                      <member.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground" />
                     </div>
                   </div>
                   <div className="flex-1">
-                    <Badge className="mb-3">Specialist {index + 1}</Badge>
-                    <h4 className="text-xl font-bold mb-2">{member.role}</h4>
-                    <p className="text-muted-foreground">{member.description}</p>
+                    <Badge className="mb-3 bg-primary text-primary-foreground border-none uppercase text-xs font-black">Specialist {index + 1}</Badge>
+                    <h4 className="text-lg sm:text-xl font-black mb-2 uppercase">{member.role}</h4>
+                    <p className="text-sm sm:text-base text-muted-foreground">{member.description}</p>
                   </div>
                 </div>
               </Card>
             ))}
           </div>
 
-          <Card className="mt-12 p-8 bg-gradient-to-br from-accent/10 to-primary/10 border-primary/30">
-            <h3 className="text-2xl font-bold mb-4 text-center">What This Means</h3>
+          <Card className="mt-8 sm:mt-12 p-6 sm:p-8 bg-primary/10 border-2 border-primary">
+            <h3 className="text-xl sm:text-2xl font-black mb-4 text-center uppercase">What This Means</h3>
             <div className="space-y-3 text-center max-w-3xl mx-auto">
-              <p className="text-lg">
-                Every rupee is going into people who will work <span className="font-bold text-primary">exclusively</span> on making Kraayonz Pune the <span className="font-bold text-accent">#1 tattoo destination</span> in the city
+              <p className="text-base sm:text-lg font-bold">
+                Every rupee is going into people who will work <span className="text-primary uppercase">exclusively</span> on making Kraayonz Pune the <span className="text-primary uppercase">#1 tattoo destination</span> in the city
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground">
                 No agency overhead, no hidden costs — pure execution power
               </p>
             </div>

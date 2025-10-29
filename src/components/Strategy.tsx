@@ -47,46 +47,46 @@ export const Strategy = () => {
   ];
 
   return (
-    <section id="strategy" className="py-24">
+    <section id="strategy" className="py-16 sm:py-24 border-t border-border">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black">
-            The Strategy: <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Hybrid Domination</span>
+        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-4">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+            The Strategy: <span className="text-primary">Hybrid Domination</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-xl text-muted-foreground font-bold">
             You're not a startup. You're not an established Pune giant either.
-            <br />
-            You're something better: <span className="font-bold text-foreground">27-year heritage with untapped local potential.</span>
+            <br className="hidden sm:block" />
+            You're something better: <span className="text-foreground">27-year heritage with untapped local potential.</span>
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto space-y-8">
+        <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8">
           {phases.map((phase, index) => (
             <Card 
               key={index}
-              className="overflow-hidden animate-fade-in"
+              className="overflow-hidden border-2 border-border hover:border-primary transition-all"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className={`h-2 bg-gradient-to-r ${phase.color}`} />
-              <div className="p-8 md:p-12">
-                <div className="flex flex-col md:flex-row gap-8">
+              <div className={`h-1 sm:h-2 bg-primary`} />
+              <div className="p-6 sm:p-8 md:p-12">
+                <div className="flex flex-col md:flex-row gap-6 sm:gap-8">
                   {/* Icon and header */}
                   <div className="flex-shrink-0">
-                    <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${phase.color} flex items-center justify-center mb-4`}>
-                      <phase.icon className="w-10 h-10 text-white" />
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-primary flex items-center justify-center mb-4 border-2 border-primary">
+                      <phase.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary-foreground" />
                     </div>
-                    <Badge className="mb-2">{phase.phase}</Badge>
-                    <div className="text-sm text-muted-foreground">{phase.timeline}</div>
+                    <Badge className="mb-2 bg-primary text-primary-foreground border-none font-black uppercase text-xs">{phase.phase}</Badge>
+                    <div className="text-xs sm:text-sm text-muted-foreground font-bold uppercase">{phase.timeline}</div>
                   </div>
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-3xl font-bold mb-6">{phase.title}</h3>
-                    <ul className="space-y-4">
+                    <h3 className="text-2xl sm:text-3xl font-black mb-4 sm:mb-6 uppercase">{phase.title}</h3>
+                    <ul className="space-y-3 sm:space-y-4">
                       {phase.items.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex gap-3">
-                          <div className="flex-shrink-0 w-2 h-2 rounded-full bg-primary mt-2" />
-                          <p className="text-muted-foreground flex-1">{item}</p>
+                          <div className="flex-shrink-0 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary mt-2" />
+                          <p className="text-sm sm:text-base text-muted-foreground">{item}</p>
                         </li>
                       ))}
                     </ul>
@@ -97,13 +97,13 @@ export const Strategy = () => {
           ))}
         </div>
 
-        <div className="mt-16 max-w-4xl mx-auto">
-          <Card className="p-8 bg-gradient-to-br from-primary/10 to-accent/10 border-primary/30">
-            <h3 className="text-2xl font-bold mb-4 text-center">What's Missing?</h3>
-            <p className="text-lg text-center text-muted-foreground">
+        <div className="mt-12 sm:mt-16 max-w-4xl mx-auto">
+          <Card className="p-6 sm:p-8 bg-primary/10 border-2 border-primary">
+            <h3 className="text-xl sm:text-2xl font-black mb-4 text-center uppercase">What's Missing?</h3>
+            <p className="text-sm sm:text-lg text-center text-muted-foreground">
               You already have high-end photography, storytelling videos, brand kit, certifications, and luxury infrastructure.
-              <br />
-              <span className="font-bold text-foreground mt-2 inline-block">
+              <br className="hidden sm:block" />
+              <span className="font-black text-foreground mt-2 inline-block uppercase">
                 What's missing: Systematic visibility and lead generation to fill that premium experience.
               </span>
             </p>
