@@ -44,8 +44,7 @@ export const Navigation = () => {
           <div className="flex items-center justify-between h-20">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-2xl font-black tracking-tighter hover:text-primary transition-colors"
-              style={{ fontFamily: 'cursive' }}
+              className="text-2xl font-bebas tracking-wider hover:text-primary transition-colors"
             >
               BRDR × Kraayonz
             </button>
