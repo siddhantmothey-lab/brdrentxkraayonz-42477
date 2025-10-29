@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
-import heroImage from "@/assets/hero-bg.jpg";
 
 export const Hero = () => {
   const scrollToOpportunity = () => {
@@ -8,68 +6,89 @@ export const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background with overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Tattoo art background" 
-          className="w-full h-full object-cover opacity-30"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
-      </div>
-
+    <section id="hero" className="min-h-screen bg-black relative flex items-center justify-center overflow-hidden pt-20">
       {/* Progress bar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-muted z-50">
+      <div className="fixed top-0 left-0 right-0 h-1 bg-zinc-900 z-50">
         <div 
           id="progress-bar" 
-          className="h-full bg-primary transition-all duration-300"
+          className="h-full bg-red-500 transition-all duration-300"
           style={{ width: '0%' }}
         />
       </div>
 
+      {/* Background gradient effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-red-950/20 via-black to-black"></div>
+      
+      {/* Animated background elements */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/5 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '700ms' }}></div>
+
       {/* Content */}
-      <div className="container relative z-10 text-center px-4 py-12 sm:py-20">
-        <div className="max-w-6xl mx-auto space-y-6 sm:space-y-12">
-          <div className="inline-block px-4 py-2 bg-primary/20 border border-primary mb-4">
-            <span className="text-xs sm:text-sm font-bold text-primary uppercase tracking-wider">Partnership Proposal</span>
+      <div className="relative z-10 container mx-auto px-6 text-center">
+        <div className="max-w-6xl mx-auto">
+          {/* Partnership Badge */}
+          <div className="inline-block mb-8 px-6 py-3 border-2 border-red-500 rounded-none">
+            <span className="text-red-500 text-sm font-bold tracking-[0.3em] uppercase">
+              Partnership Proposal
+            </span>
           </div>
           
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-black tracking-tighter leading-none">
-            <span className="block" style={{ fontFamily: 'cursive', textTransform: 'lowercase' }}>
-              <span className="text-primary">one of a kind</span>
-            </span>
-            <span className="block mt-2 sm:mt-4">BRDR</span>
-            <span className="block">ENTERTAINMENT</span>
-            <span className="block text-2xl sm:text-4xl md:text-5xl mt-2 sm:mt-4 text-muted-foreground">×</span>
-            <span className="block mt-2 sm:mt-4">KRAAYONZ</span>
-            <span className="block">PUNE</span>
+          {/* Main Headline */}
+          <h1 className="mb-12">
+            <div className="text-white text-7xl md:text-9xl font-black tracking-tight leading-none mb-4">
+              BRDR
+            </div>
+            <div className="text-white text-6xl md:text-8xl font-black tracking-tight leading-none">
+              ENTERTAINMENT
+            </div>
+            <div className="text-zinc-600 text-4xl md:text-6xl font-black tracking-tight leading-none mt-6">
+              ×
+            </div>
+            <div className="text-white text-6xl md:text-8xl font-black tracking-tight leading-none mt-6">
+              KRAAYONZ
+            </div>
+            <div className="text-white text-5xl md:text-7xl font-black tracking-tight leading-none mt-2">
+              PUNE
+            </div>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-bold uppercase tracking-wide">
-            A Strategic Partnership for Market Domination
+          {/* Subheading */}
+          <p className="text-zinc-400 text-xl md:text-2xl font-light tracking-wide max-w-3xl mx-auto mb-12 leading-relaxed">
+            Redefining entertainment experiences through innovative partnerships
+            <br />
+            <span className="text-red-500">and creative collaboration</span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 sm:pt-12">
-            <button 
-              className="text-base sm:text-lg px-8 py-4 bg-primary text-primary-foreground font-black uppercase tracking-wider hover:bg-primary/90 transition-all border-2 border-primary hover:shadow-[0_0_30px_rgba(255,0,0,0.5)] w-full sm:w-auto"
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
               onClick={scrollToOpportunity}
+              className="bg-red-500 hover:bg-red-600 text-white px-10 py-6 text-lg font-bold tracking-wider rounded-none border-none transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
-              Explore The Opportunity
-            </button>
-            <button 
-              className="text-base sm:text-lg px-8 py-4 bg-transparent text-foreground font-black uppercase tracking-wider border-2 border-foreground hover:bg-foreground hover:text-background transition-all w-full sm:w-auto"
+              EXPLORE PARTNERSHIP
+            </Button>
+            <Button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              variant="outline"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-10 py-6 text-lg font-bold tracking-wider rounded-none transition-all duration-300 w-full sm:w-auto"
             >
-              Contact Us
-            </button>
+              LEARN MORE
+            </Button>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="mt-20 flex flex-col items-center">
+            <div className="w-px h-16 bg-gradient-to-b from-red-500 to-transparent animate-bounce"></div>
+            <span className="text-zinc-600 text-xs tracking-widest mt-2 uppercase">Scroll</span>
           </div>
         </div>
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-primary" />
-        </div>
+      {/* Decorative X Element */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className="text-zinc-800">
+          <path d="M8 8L32 32M32 8L8 32" stroke="currentColor" strokeWidth="3" strokeLinecap="square"/>
+        </svg>
       </div>
     </section>
   );
