@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
-  const scrollToOpportunity = () => {
-    document.getElementById('opportunity')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToKPIs = () => {
+    document.getElementById('kpis')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -26,53 +26,50 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-6xl mx-auto">
-          {/* Partnership Badge */}
+          {/* Phase Badge */}
           <div className="inline-block mb-8 px-6 py-3 border-2 border-red-500 rounded-none">
             <span className="text-red-500 text-sm font-bold tracking-[0.3em] uppercase">
-              Partnership Proposal
+              Phase 1 Proposal
             </span>
           </div>
           
           {/* Main Headline */}
           <h1 className="mb-12">
-            <div className="text-white text-7xl md:text-9xl font-black tracking-tight leading-none mb-4">
-              BRDR
+            <div className="text-white text-5xl sm:text-7xl md:text-9xl font-black tracking-tight leading-none mb-4">
+              FOUNDATION
             </div>
-            <div className="text-white text-6xl md:text-8xl font-black tracking-tight leading-none">
-              ENTERTAINMENT
+            <div className="text-zinc-600 text-4xl md:text-6xl font-black tracking-tight leading-none mt-4">
+              &
             </div>
-            <div className="text-zinc-600 text-4xl md:text-6xl font-black tracking-tight leading-none mt-6">
-              ×
+            <div className="text-white text-4xl sm:text-6xl md:text-8xl font-black tracking-tight leading-none mt-4">
+              ROI-DRIVEN
             </div>
-            <div className="text-white text-6xl md:text-8xl font-black tracking-tight leading-none mt-6">
-              KRAAYONZ
-            </div>
-            <div className="text-white text-5xl md:text-7xl font-black tracking-tight leading-none mt-2">
-              PUNE
+            <div className="text-white text-4xl sm:text-6xl md:text-8xl font-black tracking-tight leading-none mt-2">
+              PERFORMANCE
             </div>
           </h1>
           
           {/* Subheading */}
           <p className="text-zinc-400 text-xl md:text-2xl font-light tracking-wide max-w-3xl mx-auto mb-12 leading-relaxed">
-            Redefining entertainment experiences through innovative partnerships
+            Predicted Timeline: <span className="text-red-500 font-bold">3 Months</span>
             <br />
-            <span className="text-red-500">and creative collaboration</span>
+            <span className="text-zinc-500">Establishing a predictable, repeatable lead-generation system</span>
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
-              onClick={scrollToOpportunity}
+              onClick={scrollToKPIs}
               className="bg-red-500 hover:bg-red-600 text-white px-10 py-6 text-lg font-bold tracking-wider rounded-none border-none transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
-              EXPLORE PARTNERSHIP
+              VIEW KPIs & GOALS
             </Button>
             <Button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               variant="outline"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-10 py-6 text-lg font-bold tracking-wider rounded-none transition-all duration-300 w-full sm:w-auto"
             >
-              LEARN MORE
+              CONTACT US
             </Button>
           </div>
 

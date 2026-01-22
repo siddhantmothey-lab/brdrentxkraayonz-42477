@@ -9,7 +9,7 @@ export const Footer = () => {
             <span className="text-primary">BRDR</span> ENTERTAINMENT
           </div>
           <p className="text-muted-foreground max-w-md mx-auto font-bold uppercase text-sm tracking-wider">
-            Marketing Agency Specialized in Tattoo Industry Growth
+            Performance Marketing Agency
           </p>
           
           {/* Portfolio Link */}
