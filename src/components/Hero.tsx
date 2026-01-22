@@ -26,35 +26,37 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-6xl mx-auto">
-          {/* Phase Badge */}
+          {/* Title Badge */}
           <div className="inline-block mb-8 px-6 py-3 border-2 border-red-500 rounded-none">
             <span className="text-red-500 text-sm font-bold tracking-[0.3em] uppercase">
-              Phase 1 Proposal
+              Growth Partnership Proposal
             </span>
           </div>
           
           {/* Main Headline */}
           <h1 className="mb-12">
-            <div className="text-white text-5xl sm:text-7xl md:text-9xl font-black tracking-tight leading-none mb-4">
-              FOUNDATION
+            <div className="text-white text-4xl sm:text-6xl md:text-8xl font-black tracking-tight leading-none mb-4">
+              BRDR ENTERTAINMENT
             </div>
             <div className="text-zinc-600 text-4xl md:text-6xl font-black tracking-tight leading-none mt-4">
-              &
+              ×
             </div>
             <div className="text-white text-4xl sm:text-6xl md:text-8xl font-black tracking-tight leading-none mt-4">
-              ROI-DRIVEN
-            </div>
-            <div className="text-white text-4xl sm:text-6xl md:text-8xl font-black tracking-tight leading-none mt-2">
-              PERFORMANCE
+              SOULPRINTS
             </div>
           </h1>
           
-          {/* Subheading */}
-          <p className="text-zinc-400 text-xl md:text-2xl font-light tracking-wide max-w-3xl mx-auto mb-12 leading-relaxed">
-            Predicted Timeline: <span className="text-red-500 font-bold">3 Months</span>
-            <br />
-            <span className="text-zinc-500">Establishing a predictable, repeatable lead-generation system</span>
-          </p>
+          {/* Engagement Overview */}
+          <div className="max-w-3xl mx-auto mb-12 space-y-4">
+            <p className="text-zinc-400 text-lg md:text-xl font-light tracking-wide leading-relaxed">
+              A <span className="text-red-500 font-bold">two-phase growth partnership</span> designed to first establish predictable, ROI-driven acquisition and then scale into a long-term <span className="text-red-500 font-bold">Loyalty & MRR Engine</span>.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-zinc-500 text-sm uppercase tracking-wider">
+              <span><span className="text-white font-bold">Commercials:</span> ₹55,000/month</span>
+              <span className="hidden sm:block">•</span>
+              <span><span className="text-white font-bold">Ad Spend:</span> Excluded</span>
+            </div>
+          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -62,14 +64,14 @@ export const Hero = () => {
               onClick={scrollToKPIs}
               className="bg-red-500 hover:bg-red-600 text-white px-10 py-6 text-lg font-bold tracking-wider rounded-none border-none transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
-              VIEW KPIs & GOALS
+              VIEW PHASE 1
             </Button>
             <Button 
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('phase2')?.scrollIntoView({ behavior: 'smooth' })}
               variant="outline"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-10 py-6 text-lg font-bold tracking-wider rounded-none transition-all duration-300 w-full sm:w-auto"
             >
-              CONTACT US
+              VIEW PHASE 2
             </Button>
           </div>
 

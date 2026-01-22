@@ -9,40 +9,47 @@ export const ExecutionTimeline = () => {
       month: "Month 1",
       title: "Foundation & Audience Intelligence",
       activities: [
-        "Conduct deep analysis of current audience landscape, market demand, competitor positioning",
-        "Define the Ideal Target Audience into two core segments",
-        "Type A (Growth Engine): Low-ticket, high-volume customers such as students and first-time tattoo clients",
-        "Type B (Value Segment): High-ticket customers driven by brand trust and word-of-mouth",
-        "Primary focus on building consistent and repeatable Type A client base",
-        "Launch Google Search campaigns",
-        "Launch Meta Lead Generation campaigns",
-        "Launch Retargeting campaigns",
-        "Clean attribution and conversion tracking setup"
+        "Market, demand & competitor analysis",
+        "Ideal audience definition:",
+        "Type A (Growth Engine): Low-ticket, high-volume clients (students, first-time tattoo clients)",
+        "Type B (Value Segment): High-ticket, trust & word-of-mouth driven clients",
+        "Primary focus on building a consistent Type A acquisition engine",
+        "Launch Google Search, Meta Lead Gen & retargeting campaigns",
+        "Clean attribution & conversion tracking setup"
       ]
     },
     {
       icon: FlaskConical,
       month: "Month 2",
-      title: "Testing, Optimization & Signal Identification",
+      title: "Testing, Optimisation & Signal Identification",
       activities: [
-        "Conduct structured A/B testing across creatives, hooks, copywriting, visual styles, audio formats, audience segments",
-        "Shortlist high-performing ads every 1-2 weeks based on lead quality, CPL, conversion behaviour",
-        "Gradually reallocate budgets toward high-performing ads and best-converting audience segments",
-        "Close collaboration on offer positioning, messaging refinement, conversion optimisation"
+        "Structured A/B testing across creatives, hooks, copy, visuals & audiences",
+        "Performance shortlisting every 1–2 weeks based on quality & CPL",
+        "Budget reallocation toward high-performing ads & segments",
+        "Offer positioning & messaging refinement"
       ]
     },
     {
       icon: Rocket,
       month: "Month 3",
-      title: "Scaling, Stability & Systemization",
+      title: "Scaling, Stability & Systemisation",
       activities: [
-        "Scale winning campaigns while reducing spend on underperforming variations",
-        "Strengthen retargeting and lookalike audiences using accumulated data",
-        "Establish repeatable content creation framework",
-        "Systematize weekly check-ins and monthly reports",
-        "Document performance benchmarks and learnings for Phase 2"
+        "Scale winning campaigns",
+        "Reduce spend on underperforming variations",
+        "Strengthen retargeting & lookalike audiences",
+        "Tight monitoring of lead quality & consistency",
+        "End-of-month survey (intent, experience, conversion feedback)",
+        "Finalise repeatable performance framework"
       ]
     }
+  ];
+
+  const ongoingActivities = [
+    "Daily performance monitoring (Google & Meta)",
+    "Daily WhatsApp performance updates",
+    "Weekly review calls (if required)",
+    "Creative iteration based on performance",
+    "Budget pacing & ad optimisation"
   ];
 
   return (
@@ -50,10 +57,10 @@ export const ExecutionTimeline = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-4">
           <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
-            Execution <span className="text-primary">Timeline</span>
+            Phase 1 <span className="text-primary">Execution Timeline</span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground font-bold">
-            Phase 1 Methodology & Activities
+            3-Month Roadmap
           </p>
         </div>
 
@@ -91,6 +98,19 @@ export const ExecutionTimeline = () => {
               </div>
             </Card>
           ))}
+
+          {/* Ongoing Activities */}
+          <Card className="p-6 sm:p-8 md:p-12 bg-primary/10 border-2 border-primary">
+            <h3 className="text-2xl sm:text-3xl font-black mb-6 uppercase text-center">Ongoing During Phase 1</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {ongoingActivities.map((item, index) => (
+                <div key={index} className="flex gap-3 items-start">
+                  <div className="flex-shrink-0 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary mt-2" />
+                  <p className="text-sm sm:text-base text-muted-foreground">{item}</p>
+                </div>
+              ))}
+            </div>
+          </Card>
         </div>
       </div>
     </section>

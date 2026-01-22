@@ -6,13 +6,13 @@ export const KPIs = () => {
     {
       icon: Users,
       label: "Qualified Leads",
-      value: "50-60",
+      value: "50–60",
       unit: "per month",
     },
     {
       icon: DollarSign,
       label: "Cost Per Lead (CPL)",
-      value: "₹700-₹1,000",
+      value: "₹700–₹1,000",
       unit: "",
     },
     {
@@ -29,24 +29,43 @@ export const KPIs = () => {
     },
     {
       icon: TrendingUp,
-      label: "Return on Ad Spend (ROAS)",
+      label: "ROAS",
       value: "2.5:1",
       unit: "",
     },
     {
       icon: BarChart3,
       label: "Revenue Attribution",
-      value: "₹2-3 Lakhs",
+      value: "₹2–3 lakhs",
       unit: "per month",
     },
+  ];
+
+  const monthlyReport = [
+    "Lead volume & flow",
+    "Traffic sources",
+    "Conversion metrics",
+    "CPL trends",
+    "ROAS & revenue attribution"
+  ];
+
+  const weeklySummaries = [
+    "Performance snapshot",
+    "Spend & lead updates",
+    "Key optimisation signals"
   ];
 
   return (
     <section id="kpis" className="py-16 sm:py-24 border-t border-border">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-4">
+          <div className="inline-block mb-4 px-4 py-2 border border-primary rounded-none">
+            <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
+              Phase 1: Foundation & ROI-Driven Performance
+            </span>
+          </div>
           <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
-            KPIs & <span className="text-primary">Goals</span>
+            KPIs & <span className="text-primary">Targets</span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground font-bold">
             By End of Month 3
@@ -56,9 +75,9 @@ export const KPIs = () => {
         {/* Primary Objective */}
         <div className="max-w-4xl mx-auto mb-12">
           <Card className="p-6 sm:p-8 bg-primary/10 border-2 border-primary">
-            <h3 className="text-xl sm:text-2xl font-black mb-4 text-center uppercase">Primary Objective</h3>
+            <h3 className="text-xl sm:text-2xl font-black mb-4 text-center uppercase">Objective</h3>
             <p className="text-center text-base sm:text-lg text-muted-foreground">
-              Establish a <span className="text-primary font-bold">predictable, repeatable lead-generation system</span> with an immediate <span className="text-primary font-bold">ROI focus</span>, backed by clean attribution and performance data.
+              Establish a <span className="text-primary font-bold">predictable, repeatable lead-generation system</span> with immediate <span className="text-primary font-bold">ROI focus</span>, backed by clean attribution and performance data.
             </p>
           </Card>
         </div>
@@ -83,18 +102,16 @@ export const KPIs = () => {
           ))}
         </div>
 
-        {/* Reporting Framework */}
+        {/* Measurement & Reporting */}
+        <div className="max-w-4xl mx-auto mb-8">
+          <h3 className="text-2xl sm:text-3xl font-black mb-8 text-center uppercase">Measurement & Reporting</h3>
+        </div>
+
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
           <Card className="p-6 sm:p-8 bg-card border-2 border-border">
             <h3 className="text-xl sm:text-2xl font-black mb-6 uppercase">Monthly Performance Report</h3>
             <ul className="space-y-3">
-              {[
-                "Lead flow and volume",
-                "Traffic sources and channel performance",
-                "Conversion metrics",
-                "CPL trends",
-                "ROAS and revenue attribution"
-              ].map((item, index) => (
+              {monthlyReport.map((item, index) => (
                 <li key={index} className="flex gap-3">
                   <div className="flex-shrink-0 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary mt-2" />
                   <p className="text-sm sm:text-base text-muted-foreground">{item}</p>
@@ -106,11 +123,7 @@ export const KPIs = () => {
           <Card className="p-6 sm:p-8 bg-card border-2 border-border">
             <h3 className="text-xl sm:text-2xl font-black mb-6 uppercase">Weekly WhatsApp Summaries</h3>
             <ul className="space-y-3">
-              {[
-                "High-level performance snapshot",
-                "Ad spend updates",
-                "Key observations and signals"
-              ].map((item, index) => (
+              {weeklySummaries.map((item, index) => (
                 <li key={index} className="flex gap-3">
                   <div className="flex-shrink-0 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary mt-2" />
                   <p className="text-sm sm:text-base text-muted-foreground">{item}</p>

@@ -17,9 +17,9 @@ export const Contact = () => {
   ];
 
   const nextSteps = [
-    "Review this Phase 1 proposal",
-    "Schedule strategy session to finalize details",
-    "Sign partnership agreement",
+    "Review this proposal",
+    "Schedule a strategy call",
+    "Confirm Phase 1 kickoff",
     "Begin Month 1 execution"
   ];
 
@@ -28,41 +28,40 @@ export const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black">
-            Let's <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Get Started</span>
+            Next <span className="text-primary">Steps</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Ready to build a predictable lead-generation system?
-          </p>
         </div>
 
         <div className="max-w-5xl mx-auto space-y-12">
-          {/* Phase 1 Summary */}
+          {/* Summary Card */}
           <Card className="p-8 md:p-12 bg-card/50 backdrop-blur border-primary/20">
-            <h3 className="text-3xl font-bold mb-8 text-center">Phase 1 Summary</h3>
+            <h3 className="text-3xl font-bold mb-8 text-center uppercase">Partnership Summary</h3>
             
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-sm text-muted-foreground mb-2 uppercase">Timeline</div>
-                <div className="text-3xl font-black text-primary">3 Months</div>
+            <div className="grid md:grid-cols-2 gap-8 text-center mb-8">
+              <div className="p-6 border-2 border-border">
+                <div className="text-sm text-muted-foreground mb-2 uppercase">Phase 1</div>
+                <div className="text-2xl font-black text-primary mb-1">₹55,000/mo</div>
+                <div className="text-sm text-muted-foreground">3 Months • Acquisition Focus</div>
               </div>
-              <div>
-                <div className="text-sm text-muted-foreground mb-2 uppercase">Investment</div>
-                <div className="text-3xl font-black text-primary">₹75,000/mo</div>
-              </div>
-              <div>
-                <div className="text-sm text-muted-foreground mb-2 uppercase">Target Leads</div>
-                <div className="text-3xl font-black text-primary">50-60/mo</div>
+              <div className="p-6 border-2 border-border">
+                <div className="text-sm text-muted-foreground mb-2 uppercase">Phase 2</div>
+                <div className="text-2xl font-black text-primary mb-1">₹55,000/mo</div>
+                <div className="text-sm text-muted-foreground">3 Months • Retention Focus</div>
               </div>
             </div>
+
+            <p className="text-center text-muted-foreground text-sm">
+              Ad spend excluded • Paid directly by Soulprints
+            </p>
           </Card>
 
           {/* Next Steps */}
-          <Card className="p-8 md:p-12 bg-gradient-to-br from-primary/10 to-accent/10 border-primary/30">
-            <h3 className="text-3xl font-bold mb-8 text-center">Next Steps</h3>
-            <div className="grid md:grid-cols-4 gap-6">
+          <Card className="p-8 md:p-12 bg-primary/10 border-2 border-primary">
+            <h3 className="text-2xl font-bold mb-8 text-center uppercase">How to Proceed</h3>
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
               {nextSteps.map((step, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent text-white font-black text-xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-primary text-primary-foreground font-black text-xl flex items-center justify-center mx-auto mb-4">
                     {index + 1}
                   </div>
                   <p className="text-sm text-muted-foreground">{step}</p>
@@ -73,16 +72,16 @@ export const Contact = () => {
 
           {/* Contact Cards */}
           <div>
-            <h3 className="text-3xl font-bold mb-8 text-center">Contact Us</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center uppercase">Contact Us</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {contacts.map((contact, index) => (
                 <Card 
                   key={index}
-                  className="p-8 bg-card/50 backdrop-blur border-primary/20 hover:border-primary transition-all"
+                  className="p-8 bg-card/50 backdrop-blur border-2 border-border hover:border-primary transition-all"
                 >
                   <div className="text-center space-y-4">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mx-auto">
-                      <span className="text-3xl font-black text-white">
+                    <div className="w-20 h-20 bg-primary flex items-center justify-center mx-auto">
+                      <span className="text-3xl font-black text-primary-foreground">
                         {contact.name.charAt(0)}
                       </span>
                     </div>
@@ -114,13 +113,13 @@ export const Contact = () => {
           </div>
 
           {/* Company Info */}
-          <Card className="p-8 bg-card/50 backdrop-blur border-primary/20">
+          <Card className="p-8 bg-card/50 backdrop-blur border-2 border-border">
             <div className="text-center space-y-2">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <h3 className="text-2xl font-bold text-primary">
                 BRDR Entertainment
               </h3>
               <p className="text-muted-foreground">
-                Performance Marketing Agency
+                Growth Partnership Proposal for Soulprints
               </p>
             </div>
           </Card>
