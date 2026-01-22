@@ -21,9 +21,10 @@ export const Navigation = () => {
 
   const navItems = [
     { label: 'Home', id: 'hero' },
-    { label: 'KPIs & Goals', id: 'kpis' },
+    { label: 'Phase 1 KPIs', id: 'kpis' },
     { label: 'Execution Timeline', id: 'execution' },
-    { label: 'Budget', id: 'budget' },
+    { label: 'Commercials', id: 'budget' },
+    { label: 'Phase 2', id: 'phase2' },
     { label: 'Deliverables', id: 'deliverables' },
     { label: 'Contact', id: 'contact' },
   ];
@@ -42,7 +43,7 @@ export const Navigation = () => {
               onClick={() => scrollToSection('hero')}
               className="text-2xl font-bebas tracking-wider hover:text-primary transition-colors"
             >
-              BRDR Entertainment
+              BRDR × Soulprints
             </button>
 
             <button

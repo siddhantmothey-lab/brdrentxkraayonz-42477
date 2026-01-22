@@ -9,7 +9,7 @@ export const Footer = () => {
             <span className="text-primary">BRDR</span> ENTERTAINMENT
           </div>
           <p className="text-muted-foreground max-w-md mx-auto font-bold uppercase text-sm tracking-wider">
-            Performance Marketing Agency
+            Growth Partnership Proposal
           </p>
           
           {/* Portfolio Link */}
