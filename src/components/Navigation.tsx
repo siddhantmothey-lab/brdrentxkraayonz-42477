@@ -21,14 +21,10 @@ export const Navigation = () => {
 
   const navItems = [
     { label: 'Home', id: 'hero' },
-    { label: 'Opportunity', id: 'opportunity' },
-    { label: 'Proposal', id: 'proposal' },
-    { label: 'Numbers', id: 'numbers' },
-    { label: 'Strategy', id: 'strategy' },
-    { label: 'Metrics', id: 'metrics' },
-    { label: 'Advantages', id: 'advantages' },
-    { label: 'Timeline', id: 'timeline' },
-    { label: 'Why BRDR', id: 'why-brdr' },
+    { label: 'KPIs & Goals', id: 'kpis' },
+    { label: 'Execution Timeline', id: 'execution' },
+    { label: 'Budget', id: 'budget' },
+    { label: 'Deliverables', id: 'deliverables' },
     { label: 'Contact', id: 'contact' },
   ];
 
@@ -46,7 +42,7 @@ export const Navigation = () => {
               onClick={() => scrollToSection('hero')}
               className="text-2xl font-bebas tracking-wider hover:text-primary transition-colors"
             >
-              BRDR × Kraayonz
+              BRDR Entertainment
             </button>
 
             <button

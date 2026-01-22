@@ -1,13 +1,9 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
-import { Opportunity } from "@/components/Opportunity";
-import { Proposal } from "@/components/Proposal";
-import { Numbers } from "@/components/Numbers";
-import { Strategy } from "@/components/Strategy";
-import { Metrics } from "@/components/Metrics";
-import { Advantages } from "@/components/Advantages";
-import { Timeline } from "@/components/Timeline";
-import { WhyBRDR } from "@/components/WhyBRDR";
+import { KPIs } from "@/components/KPIs";
+import { ExecutionTimeline } from "@/components/ExecutionTimeline";
+import { Budget } from "@/components/Budget";
+import { Deliverables } from "@/components/Deliverables";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
@@ -16,14 +12,10 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <Opportunity />
-      <Proposal />
-      <Numbers />
-      <Strategy />
-      <Metrics />
-      <Advantages />
-      <Timeline />
-      <WhyBRDR />
+      <KPIs />
+      <ExecutionTimeline />
+      <Budget />
+      <Deliverables />
       <Contact />
       <Footer />
     </div>

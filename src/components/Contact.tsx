@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MessageCircle } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
 
 export const Contact = () => {
   const contacts = [
@@ -17,10 +17,10 @@ export const Contact = () => {
   ];
 
   const nextSteps = [
-    "Review this proposal and discuss with your team",
+    "Review this Phase 1 proposal",
     "Schedule strategy session to finalize details",
     "Sign partnership agreement",
-    "Onboard team and begin Month 1 execution"
+    "Begin Month 1 execution"
   ];
 
   return (
@@ -28,39 +28,30 @@ export const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black">
-            Let's Make <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">This Happen</span>
+            Let's <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Get Started</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Ready to honor the legacy? Let's talk.
+            Ready to build a predictable lead-generation system?
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto space-y-12">
-          {/* Success Vision */}
+          {/* Phase 1 Summary */}
           <Card className="p-8 md:p-12 bg-card/50 backdrop-blur border-primary/20">
-            <h3 className="text-3xl font-bold mb-8 text-center">What Success Looks Like</h3>
+            <h3 className="text-3xl font-bold mb-8 text-center">Phase 1 Summary</h3>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <div className="text-xl font-bold text-primary">In 90 Days:</div>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li>✓ 35-40 qualified leads every month</li>
-                  <li>✓ Revenue swings reducing from 20-50% to 15-25%</li>
-                  <li>✓ Top 5-10 for "tattoo Pune"</li>
-                  <li>✓ "Popular local favorite" status building</li>
-                </ul>
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="text-sm text-muted-foreground mb-2 uppercase">Timeline</div>
+                <div className="text-3xl font-black text-primary">3 Months</div>
               </div>
-              
-              <div className="space-y-4">
-                <div className="text-xl font-bold text-accent">In 6 Months:</div>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li>✓ 45-50+ qualified leads monthly</li>
-                  <li>✓ Revenue swings at 10-15% (stable)</li>
-                  <li>✓ Top 3 ranking for "tattoo Pune"</li>
-                  <li>✓ Premium positioning with price lift</li>
-                  <li>✓ Foundation for adding chairs/artists</li>
-                  <li>✓ ₹15-18 lakh additional revenue</li>
-                </ul>
+              <div>
+                <div className="text-sm text-muted-foreground mb-2 uppercase">Investment</div>
+                <div className="text-3xl font-black text-primary">₹75,000/mo</div>
+              </div>
+              <div>
+                <div className="text-sm text-muted-foreground mb-2 uppercase">Target Leads</div>
+                <div className="text-3xl font-black text-primary">50-60/mo</div>
               </div>
             </div>
           </Card>
@@ -77,36 +68,6 @@ export const Contact = () => {
                   <p className="text-sm text-muted-foreground">{step}</p>
                 </div>
               ))}
-            </div>
-          </Card>
-
-          {/* Decision Point */}
-          <Card className="p-8 md:p-12 bg-gradient-to-br from-primary to-accent text-white shadow-2xl">
-            <h3 className="text-3xl font-bold mb-6 text-center">Your Decision Point</h3>
-            <div className="space-y-4 text-center max-w-3xl mx-auto">
-              <p className="text-lg">
-                Sameer Sir, this isn't about whether you need marketing. You already know you do.
-              </p>
-              <p className="text-lg opacity-90">
-                This is about whether you're ready to:
-              </p>
-              <ul className="space-y-2 text-left inline-block">
-                <li>• Leverage your 27-year heritage properly</li>
-                <li>• Dominate Pune the way Mumbai dominates its market</li>
-                <li>• Turn ₹75K/month into ₹3.75 lakh/month in returns</li>
-                <li>• Build stable revenue (10-15% swings instead of 20-50%)</li>
-                <li>• Hit your goals: 35-50 leads/month, local rank, steady bookings</li>
-              </ul>
-              <p className="text-xl font-bold pt-4">
-                You took a risk in 1998 when tattooing was taboo.
-                <br />
-                This isn't that kind of risk.
-              </p>
-              <p className="text-2xl font-black pt-2">
-                Let's make Kraayonz Pune what it was always meant to be:
-                <br />
-                Pune's #1 tattoo destination.
-              </p>
             </div>
           </Card>
 
@@ -159,7 +120,7 @@ export const Contact = () => {
                 BRDR Entertainment
               </h3>
               <p className="text-muted-foreground">
-                Marketing Agency Specialized in Tattoo Industry Growth
+                Performance Marketing Agency
               </p>
             </div>
           </Card>
