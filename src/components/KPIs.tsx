@@ -16,12 +16,6 @@ export const KPIs = () => {
       unit: "",
     },
     {
-      icon: Percent,
-      label: "Website Conversion Rate",
-      value: ">3%",
-      unit: "",
-    },
-    {
       icon: Target,
       label: "Booking Rate",
       value: ">40%",
