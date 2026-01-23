@@ -51,11 +51,6 @@ export const Hero = () => {
             <p className="text-zinc-400 text-lg md:text-xl font-light tracking-wide leading-relaxed">
               A <span className="text-red-500 font-bold">two-phase growth partnership</span> designed to first establish predictable, ROI-driven acquisition and then scale into a long-term <span className="text-red-500 font-bold">Loyalty & MRR Engine</span>.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-zinc-500 text-sm uppercase tracking-wider">
-              <span><span className="text-white font-bold">Commercials:</span> ₹55,000/month</span>
-              <span className="hidden sm:block">•</span>
-              <span><span className="text-white font-bold">Ad Spend:</span> Excluded</span>
-            </div>
           </div>
 
           {/* CTA Buttons */}
